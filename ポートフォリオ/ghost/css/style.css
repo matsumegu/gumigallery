@@ -1,0 +1,577 @@
+@charset "utf-8";
+html{
+    font-size:24px;
+    font-family:'Creepster', cursive;
+    letter-spacing: 0.05cm;
+    background-color: #000;
+    color: #fff;
+}
+/*スムーズスクロールの指定*/
+html{
+    scroll-behavior: smooth;
+}
+p,li{
+    line-height:1.7;
+}
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+a:visited{
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    letter-spacing: 10px;
+    cursor: pointer;
+}a:active{
+    color: #000;
+    text-decoration: none;
+}
+/*ハンバーガーメニュー*/
+/* ボタン */
+.hamburger_btn {
+	position: fixed; /* 常に最上部に表示したいので固定 */
+	top: 0;
+	right: 0;
+	width: 70px;
+	height: 72px;
+	cursor: pointer;
+	z-index: 50;
+  }
+
+  .hamburger_btn .line {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 32px;
+	height: 2px;
+	background: #fff;
+	text-align: center;
+  }
+  
+  .hamburger_btn .line_01 {
+	top: 16px;
+	transition: 0.4s ease;
+  }
+
+  .hamburger_btn .line_02 {
+	top: 26px;
+	transition: 0.4s ease;
+  }
+
+  .hamburger_btn .line_03 {
+	top: 36px;
+	transition: 0.4s ease;
+  }
+  
+   /* ３本線から「×」への表示変化を指定 */
+  .btn_line01 {
+	transform: translateY(10px) rotate(-45deg);
+	transition: 0.4s ease;
+  }
+
+  .btn_line02 {
+	transition: 0.4s ease;
+	opacity: 0;
+  }
+
+  .btn_line03 {
+	transform: translateY(-10px) rotate(45deg);
+	transition: 0.4s ease;
+  }
+  
+  /* サイドバー（表示されるメニュー部分） */
+  .menu-enter-active, .menu-leave-active {
+	transition: opacity 0.4s;
+  }
+
+  .menu-enter, .menu-leave-to {
+	opacity: 0;
+  }
+
+  .menu-leave, .menu-enter-to{
+	opacity: 1;
+  }
+  
+  .menu li {
+	list-style: none;
+	line-height: 1;
+	padding: 1rem;
+  }
+
+  .menu {
+	background-color: rgba(255, 76, 76, 0.671);
+	z-index: 30;
+	padding-top: 2rem;
+	position: fixed;
+	width: 60%;
+	height: 80rem;
+	top: 0;
+	right: 0;
+  }
+
+  .menu a {
+	display: block;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 0 2rem;
+  }
+  
+  .menu ul {
+	padding: 0;
+  }
+
+  .menu li:hover {
+	display: block;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #fff;
+  }
+  /*ハンバーガーメニューここまで*/
+  /*main*/
+  main{
+    padding: 0 4%;
+  }
+  #top img{
+    width: 100%;
+    height: auto;
+  }
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  position: relative;
+  z-index: 1;
+  /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+  height: 40vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background:url(../images/about01.JPG);
+}
+
+.slider-item02 {
+    background:url(../images/about02.JPG);
+}
+
+.slider-item03 {
+    background:url(../images/about03.JPG);
+}
+
+.slider-item04 {
+    background:url(../images/about04.JPG);
+}
+
+.slider-item05 {
+    background:url(../images/about05.jpg);
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:40vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*矢印の設定*/
+
+.slick-prev, 
+.slick-next {
+    position: absolute;
+  z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #fff;/*矢印の色*/
+    border-right: 2px solid #fff;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  position: relative;
+  z-index: 3;
+    text-align:center;
+  margin:-50px 0 0 0;/*ドットの位置*/
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#fff;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#000;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #fff;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+.about h2{
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size:10vw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.wrapper{
+  position: relative;
+}
+
+  /*動く店名*/
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  
+  .text.is-active {
+    --opacity: 1;
+    --scale: 1;
+  }
+  
+  .char {
+    font-size: 50px;
+    color: #e13a3a;
+    display: inline-block;
+    transform: scale(var(--scale, 0));
+    opacity: var(--opacity, 0);
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1), transform 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition-delay: calc(0.016s * var(--char-index));
+  }
+  
+  /* 初期CSS */
+  .container {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+  
+  .visuallyHidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+
+
+
+
+  /*ABOUT*/
+  ul.about-li {
+    list-style: url(../images/yubi.png);
+    list-style-position: inside;
+    margin-bottom: 40px;
+    text-align: center;
+    }
+/*DRINK*/
+/*　背景画像設定　*/
+
+.slider-item06 {
+  background:url(../images/drink01.JPG);
+}
+
+.slider-item07 {
+  background:url(../images/drink02.jpg);
+}
+
+.slider-item08 {
+  background:url(../images/drink03.jpg);
+}
+
+.slider-item09 {
+  background:url(../images/drink04.jpg);
+}
+
+.slider-item010 {
+  background:url(../images/drink05.jpg);
+}
+.slider-item {
+  width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height:40vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;/*背景画像をリピートしない*/
+  background-position: center;/*背景画像の位置を中央に*/
+  background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+.drink h2{
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size:10vw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/*==================================================
+アコーディオンのためのcss
+===================================*/
+
+/*アコーディオン全体*/
+.accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto 40px auto;
+}
+
+.accordion-area li{
+    margin: 10px 0;
+}
+
+.accordion-area section {
+  border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+    background-color: #e94242;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    
+}
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+  transform: rotate(45deg);
+}
+
+.title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;/*はじめは非表示*/
+    background: #000;
+    margin:0 3% 3% 3%;
+    padding: 0;
+    text-align: center;
+}
+.box img{
+    width: 100%;
+    height: auto;
+}
+/*FOOD*/
+#food{
+  background-image: url(../images/food.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20vh 40px;
+  font-size: 10vw;
+  text-align: center;
+}
+
+.foodmenu {
+    text-align: center;
+    margin: 40px 0;
+}
+.foodmenu li{
+    list-style: none;
+}
+.ja-font{
+  font-family: serif;
+}
+/*OTHER*/
+#other{
+  background-image: url(../images/other.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20vh 0;
+  font-size: 10vw;
+  text-align: center;
+}
+.coffee img{
+width: 100%;
+}
+.other{
+  margin-top: 40px;
+}
+.memo{
+  font-family: serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+/*ACCESS*/
+#access{
+  background-image: url(../images/access.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20vh 40px;
+  font-size: 10vw;
+  text-align: center;
+}
+.gmap{
+    margin-bottom: 40px;
+}
+.icon{
+  font-size: 36px;
+}
+.icon a:link{
+  color: #fff;
+}
+.icon a:visited{
+  color: #fff;
+}
+.icon img{
+  width: 100px;
+}
+.access {
+  margin: 40px 0;
+  font-family: serif;
+}
+/*CONTACT*/
+#contact{
+  background-image: url(../images/contact.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20vh 40px;
+  font-size: 10vw;
+  text-align: center;
+}
+
+
+/*footer*/
+.footlogo{
+  text-align: center;
+  padding: 50px;
+}
+.footlogo img{
+  width: 200px;
+}
+
+@media(min-width: 768px){
+.menu{
+  width: 20rem;
+}
+
+ /*top*/
+
+ #top img{
+  width: 700px;
+  height: auto;
+}
+#top{
+  text-align: center;
+}
+.char{
+  font-size: 80px;
+}
+/*DRINK*/
+/*other*/
+.coffee img{
+  max-width: 600px;
+}
+.coffee-flex{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: 40px 0;
+  
+}
+/* .other{
+  text-align: center;
+} */
+/*ACCESS*/
+
+.access{
+  display: flex;
+  width: 1000px;
+  margin: 40px auto;
+}
+
+/*CONTACT*/
+
+
+}

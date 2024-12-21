@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description"content="自然派なオーガニック美容室"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Hair salon Asahi |ご予約</title>
+        <link rel="icon" type="image/png"  href="images/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!--  CDNの読み込み -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="CSS/style.css">
+
+        <!-- <style>
+            *{
+                outline: 1px solid #ff0000;
+            }
+        </style> -->
+
+    </head>
+    <body class="klee-one-regular">
+        <header>
+            <div class="header">
+            <div>
+                <img src="images/logo.png"alt="ロゴ画像">
+            </div>
+            <nav class="headnav">
+                <ul>
+                    <li><a href="main.html" data-hover-text= "トップ" class="switch_text">Home</a></li>
+                    <li><a href="main.html#news" data-hover-text= "お知らせ" class="switch_text">News</a></li>
+                    <li><a href="main.html#menu"data-hover-text= "ヘアメニュー" class="switch_text">Hair menu</a></li>
+                    <li><a href="reservation.html" data-hover-text= "ご予約" class="switch_text">Reservation</a></li>
+                    <li><a href=main.html#access data-hover-text= "アクセス" class="switch_text">Access</a></li>
+                </ul>
+            </nav>
+            </div>
+
+        </header>
+        <main>
+
+<!--ご予約-->   
+   <div class="reservation">
+   <h3>ご予約</h3>
+    <p>営業時間　平日 10:00 〜 20:00 /<span> 土・日・祝 10:00 〜 18:00</span></p>
+   <div class="calendar">
+   <div><img src="images/calendar10.png" alt="10月カレンダー"></div>
+   <div><img src="images/calendar11.png" alt="11月カレンダー"></div>
+   </div>
+
+   <small>※ <span class="red">赤字</span>は定休日です。</small><br>
+   </div>
+   <div class="form">
+   <form>
+    <h4>ご予約フォーム</h4>
+   <table>
+    <tr><th>お名前</th><td><input type="text" name="name" required></td></tr>
+    <tr><th>電話番号</th><td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /> </td></tr>
+    <tr><th>メール<span>アドレス</span></th><td><input type="email" name="email" required></td></tr>
+    <tr><th>日付</th><td><input name="date" type="date" required></td></tr>
+    <tr><th>時間</th><td><input type="time" name="time" required></td></tr>
+    <tr><th>ご予約<span>メニュー</span></th><td><ul class="checkbox">
+                            <li><input type="checkbox" name="menu" value="cut">カット</li>
+                                 <li><input type="checkbox" name="menu" value="pa-ma">パーマ</li>
+                                 <li><input type="checkbox" name="menu" value="kyousei">縮毛矯正</li>
+                                 <li><input type="checkbox" name="menu" value="colar">カラー</li>
+                                 <li><input type="checkbox" name="menu" value="headspa">ヘッドスパ</li>
+                                </ul></td></tr>
+    <tr><th>指名</th><td><select name="parson">
+                                    <option value="1">なし</option>
+                                    <option value="2">山田　太郎</option>
+                                    <option value="3">美容　室子</option>
+                                    <option value="4">佐藤　二郎</option>
+                                    <option value="5">髪切　得江</option>
+    </select></td></tr>
+    <tr><th>その他<span>ご要望など</span></th><td><textarea name="message"></textarea></td></tr>
+   </table>
+   <p class="submit">
+    <input type="submit" value="送信">
+   </p>
+    </form>
+</div>
+
+ </main>
+ <footer>
+   <p>&copy;Hair salon Asahi All Right Reserved.</p>
+ </footer>      
+    </body>
+</html>

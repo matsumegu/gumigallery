@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial=scale=1">
+        <link  rel="icon" type="image/png" href="images/favicon.png">
+        <title>株式会社 旭ロジック | Asahi Logic Co., Ltd.</title>
+        <link  rel="icon" type="image/png" href="images/it-favicon.png">
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+        
+
+
+        <link rel="stylesheet"href="css/style.css">
+    </head>
+    <body>
+        <div class="index-view01">
+        <header>
+            <div class="header">
+            <div class="logo"><a href="top.html"><img src="images/it-logo.png"></a></div>
+            
+            <nav class="headnav">
+                <ul>
+                    <li><a href="top.html" data-hover-text= "トップ" class="switch_text">Home</a></li>
+                    <li><a href="strengths.html" data-hover-text= "当社の強み" class="switch_text">Strengths</a></li>
+                    <li><a href="service.html" data-hover-text= "サービス
+                        " class="switch_text">Service</a></li>
+                    <li><a href="company.html" data-hover-text= "会社情報" class="switch_text">Company</a></li>
+                    <div class="hover"><li class="contact"><a href="contact.html" data-hover-text= "お問い合せ" class="switch_text">CONTACT</a></li></div>
+                </ul>
+            </nav>
+            </div>
+            <div id="app">
+                <!--ハンバーガーメニューのボタン（３本線で表示される部分）-->
+                <div class="hamburger_btn" v-on:click='ActiveBtn=!ActiveBtn'>
+                  <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
+                  <span class="line line_02" v-bind:class="{'btn_line02':ActiveBtn}"></span>
+                  <span class="line line_03" v-bind:class="{'btn_line03':ActiveBtn}"></span>
+                  <span class="menu-ex" v-bind:class="{'btn_line04':ActiveBtn}">menu</span><!-- ３本線下「menu」表示 -->
+                </div>
+                
+                <!--サイドバー（表示されるメニュー部分）-->
+                <transition name="menu">
+                  <div class="menu" v-show="ActiveBtn">
+                      <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="strengths.html">Strengths</a></li>
+                          <li><a href="service.html">Service</a></li>
+                          <li><a href="company.html">Company</a></li>
+                          <li><a href="contact.html">CONTACT</a></li>
+                      </ul>
+                  </div>
+              </transition>
+              </div>
+
+        </header>
+        <main>
+            <div class="top">
+            <h1>未来を創る<br>ITコンサルティング</h1>
+            <h2>お客様のビジネスを次のステージへ</h2>
+            <p class="lead">当社は、革新的なソリューションと
+                専門的な知識で、お客様のビジネス課題を
+                解決します。業界トップの経験を持つ
+                プロフェッショナルが、
+                あなたのビジョンを実現します。</p>
+            </div>
+        </div>
+        <div class="index-view02 inview fadeIn_right">
+            <div class="title"><img src="images/it-title.png"></div>
+            <div class="strengths">
+                <span><img src="images/it-item01.png"></sapn><br>
+                <span class="img01"><img src="images/it-item02.png"></span>
+                <sapn class="img02"><img src="images/it-item03.png"></span>
+            </div>
+
+        </div>
+        <div class="index-view03 inview fadeIn_left">
+            <div class="img03"><img src="images/it-service.png"></div>
+            <p>当社は、革新的なソリューションと 専門的な知識で、お客様のビジネス課題を 解決します。業界トップの経験を持つ プロフェッショナルが、 あなたのビジョンを実現します。</p>
+        </div>
+        
+        </main>
+        <footer>
+            <div class="foot">
+                   <div>
+                    <p>ADDRESS<br>
+                    〒060-00XX<br>
+                    北海道札幌市中央区北X条X丁目X番地<br>
+                    XXビル５階</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.135950780162!2d141.35610897614563!3d43.05960817113649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b29fb890cff1b%3A0x5736412b5b3c154b!2z5aSn6YO944OT44Or!5e0!3m2!1sja!2sjp!4v1732082507766!5m2!1sja!2sjp" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         
+                </div>
+                <div class="link">
+                    <div class="hover02"><div class="contact02"><a href="contact.html" data-hover-text= "お問い合せ" class="switch_text">CONTACT</a></div></div>
+                    <div class="icon">
+                   <span><img src="images/facebook.png"></span>
+                   <span><img src="images/x.png"></span>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+        </footer>
+        <script src="slide.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+    
+</html>

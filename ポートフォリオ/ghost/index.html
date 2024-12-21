@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lamg=ja>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial=scale=1">
+        <meta name="description" content="お酒の種類が豊富なすすきのBAR GHOST">
+        <meta name="keywords" content="すすきの,BAR" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link  rel="icon" type="image/png" href="images/favicon.png">
+        <title>BAR GHOST</title>
+        <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet"href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div id="app">
+                <!--ハンバーガーメニューのボタン（３本線で表示される部分）-->
+                <div class="hamburger_btn" v-on:click='ActiveBtn=!ActiveBtn'>
+                  <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
+                  <span class="line line_02" v-bind:class="{'btn_line02':ActiveBtn}"></span>
+                  <span class="line line_03" v-bind:class="{'btn_line03':ActiveBtn}"></span>
+                </div>
+                
+                <!--サイドバー（表示されるメニュー部分）-->
+                <transition name="menu">
+                  <div class="menu" v-show="ActiveBtn">
+                      <ul>
+                          <li><a href="#top">TOP</a></li>
+                          <li><a href="#about">ABOUT</a></li>
+                          <li><a href="#drink">DRINK</a></li>
+                          <li><a href="#food">FOOD</a></li>
+                          <li><a href="#other">OTHER</a></li>
+                          <li><a href="#access">ACCESS</a></li>
+                          <li><a href="#contact">CONTACT</a></li>
+                      </ul>
+                  </div>
+              </transition>
+              </div>
+              <!-- vue.jsファイルの読み込み -->
+                <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+                <script type="text/javascript" src="app.js"></script>
+        
+
+        </header>
+        <main>
+            <div id="top"><img src="images/logoanime.gif"></div>
+            <div class="wrapper">
+            <div class="about">
+            <h2 id="about">ABOUT</h2>
+            </div>
+
+            <ul class="slider">
+              <li class="slider-item slider-item01"></li>
+              <li class="slider-item slider-item02"></li>
+              <li class="slider-item slider-item03"></li>
+              <li class="slider-item slider-item04"></li>
+              <li class="slider-item slider-item05"></li>
+            </ul>
+            <!--/wrapper-->
+            </div>
+
+            <!--動く店名-->
+            <div class="container">
+              <div class="headline">
+                <div class="visuallyHidden">SHOT BAR GHOST </div>
+            
+                <div class="text" aria-hidden="true">
+                  <span class="char" style="--char-index: 0"> S </span>
+            
+                  <span class="char" style="--char-index: 1"> H </span>
+            
+                  <span class="char" style="--char-index: 2"> O </span>
+            
+                  <span class="char" style="--char-index: 3"> T </span>
+            
+                  <span class="whitespace">&nbsp;</span>
+            
+                  <span class="char" style="--char-index: 4"> B </span>
+            
+                  <span class="char" style="--char-index: 5"> A </span>
+            
+                  <span class="char" style="--char-index: 6"> R </span>
+            
+                  <span class="whitespace">&nbsp;</span>
+            
+                  <span class="char" style="--char-index: 8"> G </span>
+            
+                  <span class="char" style="--char-index: 9"> H </span>
+            
+                  <span class="char" style="--char-index: 10"> O </span>
+            
+                  <span class="char" style="--char-index: 11"> S </span>
+            
+                  <span class="char" style="--char-index: 12"> T </span>
+            
+                </div>
+              </div>
+            </div>
+            <!--動く店名ここまで-->
+            <ul class="about-li">
+                <li>JUST ONE SHOT  800yen </li>
+                <li>charge/Entrance fee  1000yen</li>
+                <li>FOOD  660YEN</li>
+                <li>smoKING  PERMITTED</li>
+                <li>CIGARETTE TOBACCO OKAY</li>
+                <li>TAX 10%</li>
+                <li>OPEN PM8 - CLOSE AM6</li>
+                <li>CLOSED EVERY WEDNESDAY</li>
+            </ul>
+            <div class="wrapper">
+              <div class="drink">
+              <h2 id="drink">DRINK</h2>
+              </div>
+  
+              <ul class="slider">
+                <li class="slider-item slider-item06"></li>
+                <li class="slider-item slider-item07"></li>
+                <li class="slider-item slider-item08"></li>
+                <li class="slider-item slider-item09"></li>
+                <li class="slider-item slider-item010"></li>
+              </ul>
+              <!--/wrapper-->
+              </div>
+            
+            <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+            <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+            <ul class="accordion-area">
+                <li>
+                  <section>
+                    <h3 class="title">BEER</h3>
+                    <div class="box">
+                      <img src="images/beer.png">
+                    </div>
+                  </section>
+                </li>
+                <li>
+                  <section>
+                    <h3 class="title">BEST TO 1ST RECO COCKTAIL-1</h3>
+                    <div class="box">
+                      <img src="images/reco-cocktail01.png">
+                    </div>
+                  </section>
+                </li>
+                <li>
+                  <section>
+                    <h3 class="title">BEST TO 1ST RECO COCKTAIL-2</h3>
+                    <div class="box">
+                      <img src="images/reco-cocktail02.png">
+                    </div>
+                  </section>
+                  
+                </li>
+                <li>
+                    <section>
+                      <h3 class="title">STANDARD COCKTAIL</h3>
+                      <div class="box">
+                        <img src="images/cocoktail990.png">
+                      </div>
+                    </section>
+                    
+                </li>
+                <li>
+                    <section>
+                      <h3 class="title">AWSOME COCKTAIL</h3>
+                      <div class="box">
+                        <img src="images/cocktail1100.png">
+                      </div>
+                    </section>
+                    
+                </li>
+                <li>
+                    <section>
+                      <h3 class="title">smoothly＆milky COCKTAIL</h3>
+                      <div class="box">
+                        <img src="images/smoothlycocktail.png">
+                      </div>
+                    </section>
+                    
+                </li>
+                <li>
+                    <section>
+                      <h3 class="title">fruity COCKTAIL</h3>
+                      <div class="box">
+                        <img src="images/fruitycocktail.png">
+                      </div>
+                    </section>
+                    
+                </li>
+              </ul>
+              <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+                <script src="sample.js"></script>
+        
+        
+       
+          <div class="food">
+          <h2 id="food">FOOD</h2>
+          </div>
+
+        <ul class="foodmenu">
+            <li><span class="ja-font">オリーブ</span><br>
+                Olive　660yen</li>
+            <li><span class="ja-font">ピクルス</span><br>
+                Pickles　660yen</li>
+            <li><span class="ja-font">ミックスナッツ</span><br>
+                Mix Nuts　660yen</li>
+            <li><span class="ja-font">BBQプルドポーク</span><br>
+                BBQ Pulled Pork　 1320yen</li>
+            <li><span class="ja-font">イベリコポークレバーパテ</span><br>
+                Iberian PoRk Liver Paste　 1210yen</li>
+            <li><span class="ja-font">ハモンセラーノ&サラミ</span><br>
+                Jamon Serrano&Salami 　1540yen</li>
+            <li><span class="ja-font">ハッシュドポテト</span><br>
+                Hash Brown Potatoes 　880yen</li>
+            <li><span class="ja-font">チーズ</span><br>
+                Cheese 　1320yen</li>
+            <li><span class="ja-font">ハバネロチョリソー</span><br>
+                Habanero Chorizo 　1320yen</li>
+            <li><span class="ja-font">ビーフシチュー&バゲット</span><br>
+                Beef Stew&Baguette 　1650yen</li>
+            <li><span class="ja-font">レーズンバター&レパン</span><br>
+                Raisin Butter Bread 　990yen</li>
+            <li><span class="ja-font">フォンダンショコラ</span><br>
+                Fondant Chocolate　 770yen</li>
+
+        </ul>
+        <h2 id="other">other</h2>
+        <div class="other">
+        <div class="coffee-flex">
+        <div class="coffee"><img src="images/coffee.jpg"></div>
+        <div>
+        <p>DARTS：1play 100yen</p>
+        <p>COFFEE：880YEN </p>
+        <p class="memo">
+            マスターこだわりの豆を使ったコーヒーが楽しめます。<br>
+            コーヒーを使ったカクテルもお作りできます。<br>
+            ぜひスタッフにお声がけ下さい。
+        </p>
+        </div>
+        </div>
+        </div>
+
+        <h2 id="access">ACCESS</h2>
+        <div class="access">
+            <div>
+                    <p>店名：BAR GHOST</p>
+                    <p>住所：札幌市中央区南5条西3丁目10番地<br>
+                        ニューすすきのビル4階</p>
+                    <p>※すすきの駅5番出口徒歩２分</p>    
+                    <p>営業時間:PM 8 〜 AM 6</p>
+                    <p>定休日：水曜日</p>
+                    <p>電話番号:&#48;&#57;&#48;&#45;&#57;&#52;&#51;&#50;&#45;&#50;&#48;&#48;&#54;</p>
+                    <div class="icon">
+                    <a href="https://lin.ee/gj2GVF2"><img src="images/line.jpg"></a>
+                    <a href="https://www.instagram.com/bar_ghost?igsh=ZTk5cXkyN3d1czgy
+                    "><i class="fa-brands fa-instagram" style="font-size:120px;"></i></a>
+                    </div>
+             </div>
+                <div class="gmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.373527732274!2d141.3516252120617!3d43.05461097101656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b291f8d454159%3A0xef6bdc1653dfc153!2z44OL44Ol44O844GZ44Kd44GN44Gu44OT44Or!5e0!3m2!1sja!2sjp!4v1730096026565!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              
+        </div>
+        <h2 id="contact">CONTACT</h2>
+        <iframe src="https://form1ssl.fc2.com/form/?id=456dc69812950f4b" frameborder="0" class="mailform" id="456dc69812950f4b" width="100%" height="1100px" scrolling="no"></iframe>
+        
+
+
+
+        </main>
+        <footer>
+          <div class="footlogo"><img src="images/footlogo.png"></div>
+
+        </footer>
+        <!--動く店名読み込み-->
+        <script src="test-1.js"></script>
+        <!--スライドショー読み込み-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="slider.js"></script>
+    </body>
+</html>

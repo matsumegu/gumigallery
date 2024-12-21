@@ -1,0 +1,573 @@
+@charset "UTF-8";
+/*すべてのページに適用される設定*/
+html{
+    font-size: 19px;
+    color: #42342e;
+    background-color: #f6f6f1;
+    max-width: 980px;
+    margin: 0 auto;
+    
+}
+.klee-one-regular {
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    cursor:url("../images/cursol.png"),auto;
+    
+}
+a {
+  cursor:pointer;
+  }
+p,li{
+    line-height:1.7;
+}
+a:link {
+    color: #9d7c4a;
+    text-decoration: none;
+}
+a:visited{
+    color: #777;
+    text-decoration: none;
+}
+a:hover{
+    color: #6e605a;
+    text-decoration: none;
+    font-weight :bold;
+    
+}
+a:active{
+    color: #6e605a;
+    text-decoration: none;
+    font-weight :bold;
+    
+}
+
+
+/*すべてのページに適用される設定ヘッダー*/
+header{
+    background-color: #b8dae6;
+    position: fixed;
+    max-width: 980px;
+    width: 100%;
+    z-index: 10000;
+}
+.header{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center
+    
+    
+}
+.header img{
+    width: 100px;
+    height: auto;
+}
+.headnav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    
+}
+
+/*hover時に文字が変わる設定*/
+.switch_text {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  transition: 0.5s;
+}
+.switch_text::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: transparent;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.5s;
+  content: attr(data-hover-text);
+}
+.switch_text:hover {
+  color: transparent;
+}
+.switch_text:hover::before {
+  color: #9d7c4a;
+}
+/*すべてのページに適用される設定フッター*/
+footer{
+  text-align: center;
+  justify-items: center;
+  width: 100%;
+  height: 7rem;
+  background-color: #b8dae6;
+  margin-top: 50px;
+  }
+  footer p{
+      padding-top: 3rem;
+      color:#603813 ;
+  }
+
+/*INDEX*/
+
+ .title-h1{
+    background-image: url(../images/firstview.jpg);
+    background-size: cover;
+    padding-top: 150px;
+    padding-left: 50px;
+    width: 100%;
+    height: 600px;
+ }
+
+ .title-h1:hover{
+  background: url(../images/firstview-2.jpg)
+ }
+/*h1が徐々に出てくる*/
+ @keyframes typing { from { width: 0; } }
+ @keyframes caret { 50% { border-color: transparent; } }
+ 
+ h1 {
+ width: 25rem;
+ border-right: .08em solid;
+ overflow: hidden;
+ font-size: 3em;
+ white-space: nowrap;
+ animation: typing 5s steps(17, end), caret .5s step-end infinite;
+ }
+/*h1が徐々に出てくるここまで*/
+ h2:before {
+  content: url("../images/brush.png");  /*画像のURL*/
+  margin-right:10px;    /*画像右の余白*/
+  position:relative;
+  top:7px;                       /*アイコンの位置(上)*/
+}
+
+ h2{
+    padding: 0 0 0 40px;
+ }
+ .h2-h2{
+  padding-top: 120px;
+}
+h2:hover{
+  border-bottom: 5px dotted #42342e;
+}
+ .concept{
+    background: url(../images/kagami.png) no-repeat center;
+    padding: 320px 0;
+    text-align: center;
+    font-size: 16px;
+    
+ }
+ /*文字が徐々に出てくる設定*/
+ .jojo span {
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(20px);
+    display: block;
+  }
+  .jojo span:first-child {
+    animation: catch_anime 1.4s forwards 3s;
+  }
+  .jojo span:nth-child(2) {
+    animation: catch_anime 1.4s forwards 5s;
+  }
+  .jojo span:nth-child(3) {
+    animation: catch_anime 1.4s forwards 7s;
+  }
+  .jojo span:nth-child(4) {
+    animation: catch_anime 1.4s forwards 9s;
+  }
+  
+  @keyframes catch_anime {
+    0% {
+      transform: translateY(20px);
+    }
+     100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/*文字が徐々に出てくる設定ここまで*/
+
+.news-list{
+  background: url(../images/waku.png) no-repeat center;
+  background-size: contain;
+  padding: 200px 0 200px 100px;
+  list-style: none;
+}
+
+.flex{
+    display: flex;
+}
+.flex dd{
+    margin-left: 20px;
+}
+.flex dt{
+  margin-left: 20px;
+}
+/*アイコンをhover時に回転*/
+.fixed:hover img {
+  transition: transform 1s;
+  transform: rotate(360deg);
+}
+/*stylist*/
+.sliderArea {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.sliderArea.w300 {
+  max-width: 300px;
+}
+
+.slick-slide {
+  margin: 0 5px;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+.thumb {
+  margin: 20px 0 0;
+}
+
+.thumb .slick-slide {
+  cursor: pointer;
+}
+
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+
+.section {
+  max-width: 500px; /* スライダーの大きさを指定する */
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.section p._a {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 30px 0 0;
+}
+
+.section p._a .link {
+  display: inline-block;
+  color: #607D8B;
+  padding-left: 1.3em;
+  text-indent: -1.3em;
+}
+
+.section p._a .link:before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #607D8B;
+  border-right: 2px solid #607D8B;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-right: 10px;
+}
+/*メニュー*/
+.menu{
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+}
+.kind{
+  margin: 3rem auto;
+  border-bottom: 5px solid #603813;
+}
+.pricelist{
+  width: 100%;
+}
+.pricelist th{
+  border-bottom: 2px dotted #603813;
+  padding: 1rem;
+  text-align: left;
+}
+.pricelist td{
+  text-align: right;
+  border-bottom: 2px dotted #603813;
+  padding: 1rem;
+}
+.hairstyle{
+  display: flex;
+  text-align: center;
+  gap: 20px;  
+  
+}
+.bob,.arrangement,.long{
+width: 300px; 
+height: 200px;
+ 
+}
+.pic{
+  position: relative;
+  width: 305px;
+  height: 205px;
+}
+
+.pic img {
+  position: relative;
+  z-index: 2;  /* 斜線エリアの前面に画像を配置 */
+}
+
+.pic::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#d4a680 30%, rgba(0 0 0 / 0) 10%);
+  background-size: 10px 10px;
+  background-position: right bottom;
+  z-index: 1;
+}
+
+
+/*ご予約*/
+.h2-title{
+  margin-top: 100px;
+}
+.reserve{
+margin: 3rem auto;
+}
+
+.calendar{
+margin: 2rem auto 0 auto;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 5rem;
+}
+.calendar img{
+  width: 100%;
+}
+.reserve{
+  margin: 1rem;
+}
+.reserve-link:hover{
+  opacity:0.75;
+	transition:0.3s;
+
+}
+.reserve-link{
+  background: url(../images/waku02.png) no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  padding: 115px 150px;
+  font-size: 1.5rem;
+  background-color: #b8dae6;
+  border-radius: 20px;
+
+}
+.reserve-link a{
+  text-decoration: none;
+  }
+.reserve-p{
+  text-align: center;
+}  
+.red{
+  color: #ff6c51;
+}
+
+/*アクセス*/
+.access{
+  margin: 100px auto 30px auto;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.left{
+  display: flex;
+}
+.saloninfo th,.saloninfo td{
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px dotted #603813;
+}
+/*予約フォーム*/
+.reservation{
+  padding-top: 250px;
+  text-align: center;
+}
+.form{
+  margin-top: 100px;
+}
+.form h4{
+  text-align: center;
+}
+.form table{
+  margin: 0 auto;
+  max-width: 980px;
+}
+.form table th{
+  background-color: #603813;
+  color: #f6f6f1;
+  padding: 5px 10px;
+}
+.form table td{
+  border-bottom: 5px dotted #603813;
+}
+input[type="text"],input[type="email"],input[type="tel"]{
+  padding: 5px 10px;
+  width: 100%;
+}
+input[type="date"],input[type="time"],select{
+  padding: 5px 10px;
+  width: 50%;
+}
+.checkbox{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+textarea{
+  width: 100%;
+  height: 200px;
+}
+.submit{
+  text-align: center;
+  margin-top: 30px;
+}
+input[type="submit"]{
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  background-color: #603813;
+  color: #f6f6f1;
+  font-size: 1.5rem;
+}
+.submit:hover{
+  opacity:0.75;
+	transition:0.3s;
+}
+/*モバイル対応*/
+@media(max-width:767px){
+.headnav ul{
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.title-h1{
+    height: 400px;
+  }
+h1{width: 18rem;
+  border-right: .08em solid;
+  overflow: hidden;
+  font-size: 2em;
+  white-space: nowrap;
+  animation: typing 5s steps(17, end), caret .5s step-end infinite;
+
+}
+.news-list{
+    background-image: none;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 4%;
+   }
+
+/*ヘアメニュー*/
+.menu{
+  display: flex;
+ flex-direction: column;
+}
+.hairstyle{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.pic,.pic img{
+  width: 95%;
+  height: auto;
+}
+
+/*予約*/
+.calendar{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+.calendar img{
+  width: 80%;
+}
+.reserve-link{
+  background-color: #f6f6f1;
+}
+span{
+  display: inline-block;
+
+} 
+
+
+/*アクセス*/
+.access{
+  display: flex;
+  flex-direction: column;
+}
+.access p{
+  text-align: center;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+}
+iframe{
+  margin:30px 0;
+}
+.map{
+  text-align: center;
+}
+/*予約フォーム*/
+.form table tr th{
+  flex-basis: 30%;
+}
+.form table td{
+  flex-basis: 70%;
+}
+.checkbox{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+}
